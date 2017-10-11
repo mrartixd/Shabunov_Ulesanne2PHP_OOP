@@ -7,8 +7,15 @@
 <body>
 <?php
 class Course{
+    private $codecourse;
     private $namecourse;
-    private $
+    private $nameteacher;
+    private $mandatory;
+    private $module;
+    private $eap;
+    private $mark;
+    private $language;
+    private $description
 }
 
 
