@@ -9,12 +9,16 @@
 При оценивании также будет учитываться внешний вид пользовательского интерфейса
 
 Используйте git при пректировании проекта -->
+<?php include course.php
+include students.php ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
+<link href="css/bootstrap.css" rel="stylesheet">
 <title>Shabunov Ulesanne 2</title>
 </head>
 <body>
+<script href="js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>
