@@ -21,6 +21,7 @@ include students.php; ?>
 <title>Shabunov Ulesanne 2</title>
 </head>
 <body>
+<script href="js/bootstrap.js" type="text/javascript"></script>
 <div class="container" style="padding-top: 30px">
     <div class="row">
 	    <div class="col-12 col-md-4">
@@ -34,8 +35,19 @@ include students.php; ?>
             <li class="list-group-item list-group-item-success">Используйте git при пректировании проекта</li>
 		</ul>
 	</div>
+<?php
+echo '<div class="card">
+<div class="card-header">
+  Название курса
 </div>
-<script href="js/bootstrap.js" type="text/javascript"></script>
+<div class="card-body">
+  <h6 class="card-title">Описание курса</h6>
+  <p class="card-text">Описание курса</p>
+  <a href="#" class="btn btn-primary">Подробнее</a>
+</div>
+</div>
+</div>';
+?>
 </body>
 <footer style="padding-top: 80px;"><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
 </html>
