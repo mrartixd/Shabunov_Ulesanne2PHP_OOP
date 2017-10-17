@@ -35,8 +35,6 @@ include students.php; ?>
 		</ul>
 	</div>
 </div>
-
-
 <script href="js/bootstrap.js" type="text/javascript"></script>
 </body>
 <footer style="padding-top: 80px;"><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
