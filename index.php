@@ -10,9 +10,6 @@
 
 Используйте git при пректировании проекта -->
 <?php error_reporting( E_ERROR ); ?>
-<?php 
-include course.php;
-include students.php; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,21 +33,27 @@ include students.php; ?>
 		</ul>
 	</div>
 <?php
-$course1 = new course("RAM0121","Veebiprogrammeerimine I","Ivan Ivanov",
-"yes", "Programmeerimise moodul", 4, "H","rus","PHP, MySQL");
-
+require_once "course.php";
+$course[3];
+$course[0] = new Course("NTR0560", "Sissejuhatus telemaatika ja arukate süsteemide erialass", 5,"H","EST");
+$course[1] = new Course("RAM0121","Veebiprogrammeerimine I", 4,"H","RUS");
+$course[2] = new Course("RAH0211", "Informaatika 1", 4,"E","EST");
 ?>
-<div class="card">
+
+<?php
+for($x=0; $x<3;$x++){
+echo '<div class="card">
 <div class="card-header">
-  <?php echo $course1->Getnamecourse(); ?>
+  '; echo $course[0]->Getcodecourse().'
 </div>
 <div class="card-body">
-  <h6 class="card-title">Описание курса</h6>
-  <p class="card-text">Описание курса</p>
-  <a href="#" class="btn btn-primary">Подробнее</a>
-</div>
+  <h4 class="card-title">'; echo $course[0]->Getnamecourse().'</h4>
+  <p class="card-text">EAP: '; echo $course[0]->Geteap().', Оценивание: '; echo $course[0]->Getmark().', Язык: '; echo $course[0]->Getlanguage().'</p>
+  <a href="infocourse.php" class="btn btn-primary">Подробнее</a>
 </div>
 </div>';
+}?>
+</div>
 </body>
 <footer style="padding-top: 80px;"><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
 </html>
