@@ -36,9 +36,13 @@ include students.php; ?>
 		</ul>
 	</div>
 <?php
-echo '<div class="card">
+$course1 = new course("RAM0121","Veebiprogrammeerimine I","Ivan Ivanov",
+"yes", "Programmeerimise moodul", 4, "H","rus","PHP, MySQL");
+
+?>
+<div class="card">
 <div class="card-header">
-  Название курса
+  <?php echo $course1->Getnamecourse(); ?>
 </div>
 <div class="card-body">
   <h6 class="card-title">Описание курса</h6>
@@ -47,7 +51,6 @@ echo '<div class="card">
 </div>
 </div>
 </div>';
-?>
 </body>
 <footer style="padding-top: 80px;"><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
 </html>

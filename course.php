@@ -7,10 +7,9 @@
     private $eap;
     private $mark;
     private $language;
-    private $description
-
-    function__construct($codecourse="RAM0121",$namecourse="Veebiprogrammeerimine I",$nameteacher="Ivan Ivanov",
-    $mandatory="yes", $module="Programmeerimise moodul", $eap=4, $mark=h,$language="rus",$description="PHP, MySQL"){
+    private $description;
+}
+    function__construct($codecourse="RAM0121",$namecourse="Veebiprogrammeerimine I",$nameteacher="Ivan Ivanov",$mandatory="yes", $module="Programmeerimise moodul", $eap=4, $mark="h", $language="rus", $description="PHP, MySQL"){
         $this->codecourse=$codecourse;
         $this->namecourse=$namecourse;
         $this->nameteacher=$nameteacher;
@@ -42,4 +41,4 @@
     function Setlanguage($language) {$this->language=$language;}
     function Getdescription() {echo $this->description;}
     function Setdescription($description) {$this->description=$description;}
-} ?>
+ ?>
