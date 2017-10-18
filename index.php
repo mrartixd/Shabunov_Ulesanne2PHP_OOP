@@ -55,7 +55,7 @@ echo '
   <p class="card-text">EAP: '; echo $course[$x]->Geteap().'</p>
   <p class="card-text">Оценивание: '; echo $course[$x]->Getmark().'</p>
   <p class="card-text">Язык: '; echo $course[$x]->Getlanguage().'</p>
-  <a href="infocourse.php" class="btn btn-primary">Подробнее</a>
+  <a href="infocourse.php'.$_SERVER['PHP_SELF'].'?page='.$x.'" class="btn btn-primary">Подробнее</a>
 </div>
 </div>
 </div>';
