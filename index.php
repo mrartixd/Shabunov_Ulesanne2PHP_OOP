@@ -11,7 +11,6 @@
 Используйте git при пректировании проекта -->
 <?php
 require_once 'model/course.php';
-require_once 'model/student.php';
 require_once 'service/finddata.php';
 require_once 'service/courseFindDataImpl.php';
 ?>
@@ -25,7 +24,7 @@ require_once 'service/courseFindDataImpl.php';
     </head>
     <body>
     <script href="js/bootstrap.js" type="text/javascript"></script>
-    <div class="container" style="padding-top: 30px">
+    <div class="container" style="padding-top: 30px; padding-bottom:100px">
     <div class="row">
 	    <div class="col-12 col-md-12">
 		<ul class="list-group">
@@ -39,7 +38,6 @@ require_once 'service/courseFindDataImpl.php';
 		</ul>
 	</div>
         <?php
-        //$x = 10;
         $data=new CourseFindDataImpl;
         foreach ($data->findAll() as $course) {
             $id=$course->Getid();
@@ -47,18 +45,16 @@ require_once 'service/courseFindDataImpl.php';
             <div class="col col-md-3" style="padding-top: 30px">
             <div class="card">
             <div class="card-header">
-              '; echo $course->Getnamecourse().'
+              '; echo $course->Getcodecourse().'
             </div>
             <div class="card-body">
-              <h4 class="card-title">'; echo $course->Getcodecourse().'</h4>
+              <h4 class="card-title">'; echo $course->Getnamecourse().'</h4>
               <a href="infocourse.php?id='.$id.'" class="btn btn-primary">Подробнее</a>
             </div>
             </div>
             </div>';
         }      
-        //$id=5;
-        //echo "Student (id={$id}): ".$data->findByID($id);
         ?>
     </body>
-    <footer style="padding-top: 80px;"><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
+    <footer><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
 </html>

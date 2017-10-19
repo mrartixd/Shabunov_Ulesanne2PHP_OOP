@@ -24,4 +24,12 @@ class StudentFindDataImpl implements FindData {
         }
         return null;
     }
+
+    public function findByGroup($group) {
+        foreach ($this->listStudents as $student) {
+            if($student->getGroup()==$group)
+                return $student;
+        }
+        return null;
+    }
 }
