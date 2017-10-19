@@ -11,8 +11,6 @@
 </body>
 <?php
 include_once "index.php";
-if($_REQUEST['page'])
-{
         $page=$_REQUEST['page'];
         if($page==$x)
         echo '
@@ -29,7 +27,6 @@ if($_REQUEST['page'])
         </div>
         </div>
         </div>';
-}
 ?>
 <footer style="padding-top: 80px;"><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>
 </html>
