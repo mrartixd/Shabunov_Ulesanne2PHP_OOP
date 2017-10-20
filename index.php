@@ -40,20 +40,19 @@ require_once 'service/courseFindDataImpl.php';
         <?php
         $data=new CourseFindDataImpl;
         foreach ($data->findAll() as $course) {
-            $id=$course->Getid();
-            echo '
+            $id=$course->Getid();?>
             <div class="col col-md-3" style="padding-top: 30px">
             <div class="card">
             <div class="card-header">
-              '; echo $course->Getcodecourse().'
+              <?php echo $course->Getcodecourse(); ?>
             </div>
             <div class="card-body">
-              <h4 class="card-title">'; echo $course->Getnamecourse().'</h4>
-              <a href="infocourse.php?id='.$id.'" class="btn btn-primary">Подробнее</a>
+              <h4 class="card-title"><?php echo $course->Getnamecourse();?></h4>
+              <a href="infocourse.php?id=<?php echo $id;?>" class="btn btn-primary">Подробнее</a>
             </div>
             </div>
-            </div>';
-        }      
+            </div>
+       <?php }      
         ?>
     </body>
     <footer><div class="fixed-bottom p-3 bg-info text-white">Artur Shabunov 2017</div></footer>

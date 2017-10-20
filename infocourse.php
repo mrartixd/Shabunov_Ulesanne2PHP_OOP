@@ -22,14 +22,14 @@ require_once 'service/studentFindDataImpl.php';
         <div class="card-header">
         <?php
         $data=new CourseFindDataImpl;
-        echo $data->findByID($_GET['id'])->Getcodecourse().'
+        echo $data->findByID($_GET['id'])->Getcodecourse(); ?>
         </div>
         <div class="card-body">
-          <h4 class="card-title">'; echo $data->findByID($_GET['id'])->Getnamecourse().'</h4>
-          <p class="card-text">EAP: '; echo $data->findByID($_GET['id'])->Geteap().' </p>
-          <p class="card-text">Оценивание: '; echo $data->findByID($_GET['id'])->Getmark().' </p>
-          <p class="card-text">Группа: '; $coursgroup = $data->findByID($_GET['id'])->Getgroup().' </p>';
-          $datast=new StudentFindDataImpl; 
+          <h4 class="card-title"><?php $data->findByID($_GET['id'])->Getnamecourse();?></h4>
+          <p class="card-text">EAP: <?php $data->findByID($_GET['id'])->Geteap();?></p>
+          <p class="card-text">Оценивание: <?php $data->findByID($_GET['id'])->Getmark();?> </p>
+          <p class="card-text">Группа: <?php $coursgroup = $data->findByID($_GET['id'])->Getgroup();?> </p>
+          <?php $datast=new StudentFindDataImpl; 
 
           foreach ($datast->findAll() as $student) {
           $studentgroup = $student->getGroup();
