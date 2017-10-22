@@ -1,3 +1,5 @@
+<!--Artur Shabunov RDIR51 -->
+<!--class Course -->
 <?php 
 
 class Course {
@@ -8,14 +10,16 @@ class Course {
     private $namecourse;
     private $eap;
     private $mark;
+    private $teacher;
     private $group;
 
-    public function __construct($codecourse=null, $namecourse=null, $eap=null,$mark=null,$group=null){
+    public function __construct($codecourse=null, $namecourse=null, $eap=null,$mark=null,$teacher=null,$group=null){
         $this->id = ++self::$count;
         $this->codecourse= $codecourse;
         $this->namecourse= $namecourse;
         $this->eap=$eap;
         $this->mark=$mark;
+        $this->teacher=$teacher;
         $this->group=$group;
     }
 
@@ -34,7 +38,9 @@ class Course {
     public function Setmark($mark) {$this->mark=$mark;}
     public function Getgroup() {echo $this->group;}
     public function Setgroup($group) {$this->group=$group;}
+    public function Getteacher() {echo $this->teacher;}
+    public function Setteacher($teacher) {$this->teacher=$teacher;}
 
-    public function __toString() {return "Course: {$this->codecourseid}: {$this->namecourse}: {$this->eap}: {$this->mark}: {$this->group}";}
+    public function __toString() {return "Course: {$this->codecourseid}: {$this->namecourse}: {$this->eap}: {$this->mark}: {$this->teacher}: {$this->group}";}
 } 
  ?>

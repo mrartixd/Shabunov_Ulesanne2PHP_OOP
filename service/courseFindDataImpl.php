@@ -1,3 +1,6 @@
+<!--Artur Shabunov RDIR51 -->
+<!-- class courseFindData -->
+
 <?php
 
 require_once 'model/course.php';

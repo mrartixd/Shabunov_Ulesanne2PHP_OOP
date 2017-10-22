@@ -1,3 +1,5 @@
+<!--Artur Shabunov RDIR51 -->
+<!--class infocourse -->
 <?php
 require_once 'model/course.php';
 require_once 'model/student.php';
@@ -23,22 +25,27 @@ require_once 'service/studentFindDataImpl.php';
         <?php
         $data=new CourseFindDataImpl;
         echo $data->findByID($_GET['id'])->Getcodecourse(); ?>
-        </div>
-        <div class="card-body">
+          </div>
+          <div class="card-body">
           <h4 class="card-title"><?php $data->findByID($_GET['id'])->Getnamecourse();?></h4>
           <p class="card-text">EAP: <?php $data->findByID($_GET['id'])->Geteap();?></p>
           <p class="card-text">Оценивание: <?php $data->findByID($_GET['id'])->Getmark();?> </p>
-          <p class="card-text">Группа: <?php $coursgroup = $data->findByID($_GET['id'])->Getgroup();?> </p>
-          <?php $datast=new StudentFindDataImpl; 
-
-          foreach ($datast->findAll() as $student) {
-          $studentgroup = $student->getGroup();
-           if($coursgroup == $studentgroup){
-             // echo $student->GetFirstname().' ';
-             // echo $student->GetLastname().'<br>';
-             }
+          <p class="card-text">Преподаватель: <?php $data->findByID($_GET['id'])->Getteacher();?> </p>
+          <!-- <p class="card-text">Группа: <?php $coursgroup = $data->findByID($_GET['id'])->Getgroup();?> </p>--> 
+          <p class="card-text">Студенты: <br>
+          <?php 
+          $datastudent=new StudentFindDataImpl; 
+           foreach ($datastudent->findAll() as $student) {
+                 echo $student->getFirstname().' ';
+                 echo $student->getLastname().', ';
+                 echo $student->getGroup().'<br>';
           }
+        //   foreach ($datastudent->findAll() as $student) { эксперементы
+        //     if($student->getGroup()==$coursgroup)
+        //         return $student;
+        // }
           ?>
+          </p>
           <a href="index.php" class="btn btn-primary">Назад</a>
         </div>
       </div>

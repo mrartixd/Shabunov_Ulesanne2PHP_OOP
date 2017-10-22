@@ -1,3 +1,5 @@
+<!--Artur Shabunov RDIR51 -->
+<!-- course Student -->
 <?php
 
 class Student {
